@@ -14,12 +14,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <audio loop autoplay>
-      <source
-        src="lofi songs for slow days [TubeRipper.com].mp3"
-        type="audio/mpeg"
-      />
-    </audio>
     <div class="time-clock">11:11PM</div>
     <div class="water-layout-div">
       <div>
@@ -45,10 +39,8 @@
       </div>
     </div>
     <div class="temperature-layout-div">
-      <div class="sunny">
-        <img
-          src="images/vecteezy_sun-icon-set-clipart-design-illustration_9399550_413.png"
-        />
+      <div class="sun">
+        <img src="images/icons/sun.png" />
       </div>
       <div>
         <p class="city-name">London</p>
@@ -58,5 +50,11 @@
         <input class="search-box" type="text" placeholder="Location" />
       </div>
     </div>
+    <audio id="audioplayer" class="audio" controls autoplay>
+      <source
+        src="songs/lofi songs for slow days [TubeRipper.com].mp3"
+        type="audio/mpeg"
+      />
+    </audio>
   </body>
 </html>

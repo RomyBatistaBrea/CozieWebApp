@@ -4,15 +4,29 @@
 }
 
 body {
-  background: url('images/junior.jpg');
+  background: url('images/backgrounds/night-time.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position:bottom 25%;
-  background-size:100% auto;
+  /*This is what makes the background image resize to fully cover the page*/
+  background-size:cover;
+  resize: both;
+  /*----------------------------------------------------------------------*/
+  width: 100%;
+  overflow: hidden;
+}
+
+.audio {
+  margin-left: 3vw;
+  margin-top: 85vh;
+  width: 26%;
+  color: white;
+  display: inline-block;
+
 }
 
 .time-clock {
-  font-size: 60px;
+  font-size: 3vw;
   color: white;
   position: fixed;
   right: 0;
@@ -20,7 +34,7 @@ body {
   margin-right: 82px;
   padding: 15px;
   border-radius: 15px;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
 }
 
 .temperature-layout-div {
@@ -32,7 +46,7 @@ body {
   bottom: 0;
   right: 0;
   border: 1px solid rgba(255, 255, 255, 0.411);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(16px);
   margin-right: 50px;
   margin-bottom: 45px;
   
@@ -60,24 +74,26 @@ p {
 ::placeholder {
   color: black;
   transition: color 0.3s;
+  font-size: 1vw;
 }
 
 .city-name {
   display: inline-block;
-  font-size: 24px;
-  color: black;
+  font-size: 2vw;
+  color: white;
   padding-right: 5px;
   width: 50%;
 }
 
 .temperature {
   display: inline-block;
-  font-size: 55px;
+  font-size: 3vw;
   color: white;
   padding-left: 5px;
 }
 
 .search-box {
+  background-size:1vw;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 5px;
@@ -101,7 +117,7 @@ img {
   background-size: cover;
 }
 
-.sunny {
+.sun {
   background-repeat: no-repeat;
   max-height: 100%; max-width: 100%; object-fit: contain;
 }
@@ -114,7 +130,7 @@ img {
   position: fixed;
   left: 0;
   border: 1px solid rgba(62, 204, 248, 0.792);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(16px);
   margin-left: 50px;
   margin-top: 45px;
   text-align: center;
@@ -122,8 +138,8 @@ img {
 }
 
 .water-header {
-  font-size: 35px;
   color: rgba(90, 180, 235, 0.676);
+  font-size: 2vw;
 }
 
 .cup-count {
