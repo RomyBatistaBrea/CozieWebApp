@@ -1,0 +1,147 @@
+*
+{
+  font-family: 'Space Mono', monospace;
+}
+
+body {
+  background: url('images/junior.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position:bottom 25%;
+  background-size:100% auto;
+}
+
+.time-clock {
+  font-size: 60px;
+  color: white;
+  position: fixed;
+  right: 0;
+  border: 2px solid white;
+  margin-right: 82px;
+  padding: 15px;
+  border-radius: 15px;
+  backdrop-filter: blur(2px);
+}
+
+.temperature-layout-div {
+  width:25vw;
+  height:60vh;
+  border-radius: 25px;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border: 1px solid rgba(255, 255, 255, 0.411);
+  backdrop-filter: blur(10px);
+  margin-right: 50px;
+  margin-bottom: 45px;
+  
+  text-align: center;
+}
+
+.collect-happy-sticker {
+    background-color: transparent;
+    font-family: 'Space Mono', monospace;
+    font-size: 15px;
+    color: white;
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+
+  }
+.collect-happy-sticker:hover {
+    background-color: red;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 100;
+}
+
+::placeholder {
+  color: black;
+  transition: color 0.3s;
+}
+
+.city-name {
+  display: inline-block;
+  font-size: 24px;
+  color: black;
+  padding-right: 5px;
+  width: 50%;
+}
+
+.temperature {
+  display: inline-block;
+  font-size: 55px;
+  color: white;
+  padding-left: 5px;
+}
+
+.search-box {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  border: none;
+  transition: background-color 0.3s;
+  outline: none;
+  background-color:rgba(255, 255, 255, 0.26)
+}
+
+.search-box:hover{
+  background-color:white
+}
+
+
+img {
+  width: 150px;
+  height: 150px;
+  margin-top: 18px;
+  background-size: cover;
+}
+
+.sunny {
+  background-repeat: no-repeat;
+  max-height: 100%; max-width: 100%; object-fit: contain;
+}
+
+.water-layout-div {
+  width:25vw;
+  height:60vh;
+  border-radius: 25px;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  border: 1px solid rgba(62, 204, 248, 0.792);
+  backdrop-filter: blur(10px);
+  margin-left: 50px;
+  margin-top: 45px;
+  text-align: center;
+
+}
+
+.water-header {
+  font-size: 35px;
+  color: rgba(90, 180, 235, 0.676);
+}
+
+.cup-count {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  border: none;
+  transition: background-color 0.3s;
+  outline: none;
+  background-color: rgba(90, 180, 235, 0.676);
+
+}
+
+.block-1 {
+  background-color: black;
+  display: inline-block;
+  margin: none;
+  left: 0;
+}

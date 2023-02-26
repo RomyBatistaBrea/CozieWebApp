@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Cozie</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio loop autoplay>
+      <source
+        src="lofi songs for slow days [TubeRipper.com].mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <div class="time-clock">11:11PM</div>
+    <div class="water-layout-div">
+      <div>
+        <p class="water-header">Stay Hydrated!</p>
+      </div>
+
+      <div>
+        <input
+          class="cup-count"
+          type="text"
+          id="cup-count"
+          placeholder="Enter cups"
+        />
+      </div>
+      <div class="water-bar">
+        <script>
+          function cupcounter() {
+            var blocks = document.getElementById("cup-count").value;
+            document.write(blocks);
+          }
+          cupcounter();
+        </script>
+      </div>
+    </div>
+    <div class="temperature-layout-div">
+      <div class="sunny">
+        <img
+          src="images/vecteezy_sun-icon-set-clipart-design-illustration_9399550_413.png"
+        />
+      </div>
+      <div>
+        <p class="city-name">London</p>
+        <p class="temperature">27&#176;</p>
+      </div>
+      <div>
+        <input class="search-box" type="text" placeholder="Location" />
+      </div>
+    </div>
+  </body>
+</html>
