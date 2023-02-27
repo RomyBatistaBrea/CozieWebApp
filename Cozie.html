@@ -3,7 +3,7 @@
 <html>
   <head>
     <title>Cozie</title>
-
+    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,31 +13,35 @@
 
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div class="time-clock">11:11PM</div>
+  <body onload="realtimeClock()">
+    <div id="clock"></div>
     <div class="water-layout-div">
-      <div>
-        <p class="water-header">Stay Hydrated!</p>
+      <div class="text-wrapper">
+        <span style="--i: 1">C</span>
+        <span style="--i: 2">O</span>
+        <span style="--i: 3">Z</span>
+        <span style="--i: 4">I</span>
+        <span style="--i: 5">E</span>
       </div>
 
-      <div>
+      <div class="count-wrapper">
         <input
           class="cup-count"
           type="text"
           id="cup-count"
           placeholder="Enter cups"
+          onkeydown="updatebar(this)"
         />
       </div>
       <div class="water-bar">
-        <script>
-          function cupcounter() {
-            var blocks = document.getElementById("cup-count").value;
-            document.write(blocks);
-          }
-          cupcounter();
-        </script>
+        <div id="bar" class="bar"></div>
+      </div>
+      <div class="hydration-studies">
+        Hydration studies show that you need at least 8 glasses of water every
+        day to maintain healthy hydration levels.
       </div>
     </div>
+
     <div class="temperature-layout-div">
       <div class="sun">
         <img src="images/icons/sun.png" />

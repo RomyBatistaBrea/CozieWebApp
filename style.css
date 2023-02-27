@@ -30,7 +30,7 @@ body {
   color: white;
   position: fixed;
   right: 0;
-  border: 2px solid white;
+  border: 2px solid rgba(133, 53, 207, 0.443);
   margin-right: 82px;
   padding: 15px;
   border-radius: 15px;
@@ -45,8 +45,8 @@ body {
   position: fixed;
   bottom: 0;
   right: 0;
-  border: 1px solid rgba(255, 255, 255, 0.411);
-  backdrop-filter: blur(16px);
+  border: 2px solid rgba(133, 53, 207, 0.443);
+  background-color: rgba(109, 16, 196, 0.24);
   margin-right: 50px;
   margin-bottom: 45px;
   
@@ -111,9 +111,9 @@ p {
 
 
 img {
-  width: 150px;
-  height: 150px;
-  margin-top: 18px;
+  width: 45%;
+  height: 45%;
+  margin-top: 25px;
   background-size: cover;
 }
 
@@ -129,8 +129,8 @@ img {
   overflow: hidden;
   position: fixed;
   left: 0;
-  border: 1px solid rgba(62, 204, 248, 0.792);
-  backdrop-filter: blur(16px);
+  border: 2px solid rgba(133, 53, 207, 0.443);
+  background-color: rgba(109, 16, 196, 0.24);
   margin-left: 50px;
   margin-top: 45px;
   text-align: center;
@@ -142,6 +142,11 @@ img {
   font-size: 2vw;
 }
 
+.count-wrapper {
+  display: inline-block;
+  width: 100%;
+  margin-top: 10%;
+}
 .cup-count {
   padding-left: 20px;
   padding-right: 20px;
@@ -151,13 +156,60 @@ img {
   border: none;
   transition: background-color 0.3s;
   outline: none;
-  background-color: rgba(90, 180, 235, 0.676);
+  background-color: white;
 
 }
 
-.block-1 {
-  background-color: black;
+.bar {
+  border: 8px solid rgba(47, 47, 47, 0.176);
+  max-width: 90%;
+  border-radius: 10px;
+  margin-top: 10%;
   display: inline-block;
-  margin: none;
-  left: 0;
+  justify-content: center;
+}
+
+.hydration-studies {
+  color: white;
+  font-size:.9vw;
+  margin-top: 10%;
+  width: 65%;
+  border-radius: 8px;
+  background-color: rgba(62, 10, 112, 0.263);
+  display: inline-block;
+  padding: 10px;
+}
+
+span {
+  margin-top: 5%;
+  margin-bottom: 8%;
+  display: inline-block;
+  font-size: 1.5vw;
+  color: white;
+  animation: waveAnimation 2s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes waveAnimation {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+#clock{
+  font-size: 2.5vw;
+  color: white;
+  position: fixed;
+  right: 0;
+  border: 2px solid rgba(133, 53, 207, 0.443);
+  margin-right: 82px;
+  padding: 15px;
+  border-radius: 15px;
+  backdrop-filter: blur(4px);
 }
