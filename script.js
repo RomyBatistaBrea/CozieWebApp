@@ -15,18 +15,18 @@ function realtimeClock() {
           
 
 function updatebar(ele) {
-            if (event.key === "Enter") {
-              var cupCount = ele.value;
-              var multiplier = 12.5;
-              var bar = document.getElementById("bar");
-              if (cupCount == 8) {
-                bar.style.backgroundColor = "rgb(1, 208, 254)";
-                bar.style.width = cupCount * multiplier + "%";
-              } else if (cupCount == 7) {
-                bar.style.backgroundColor = "rgb(1, 190, 235)";
-                bar.style.width = cupCount * multiplier + "%";
-              } else if (cupCount == 6) {
-                bar.style.backgroundColor = "rgb(1, 172, 216)";
+  if (event.key === "Enter") {
+    var cupCount = ele.value;
+    var multiplier = 12.5;
+    var bar = document.getElementById("bar");
+    if (cupCount == 8) {
+      bar.style.backgroundColor = "rgb(1, 208, 254)";
+      bar.style.width = cupCount * multiplier + "%";
+      } else if (cupCount == 7) {
+      bar.style.backgroundColor = "rgb(1, 190, 235)";
+      bar.style.width = cupCount * multiplier + "%";
+      } else if (cupCount == 6) {
+      bar.style.backgroundColor = "rgb(1, 172, 216)";
                 bar.style.width = cupCount * multiplier + "%";
               } else if (cupCount == 5) {
                 bar.style.backgroundColor = "rgb(1, 154, 197)";
@@ -52,3 +52,28 @@ function updatebar(ele) {
               }
             }
           }
+
+          let weather = {
+            apiKey : "ad25070f8ead3713464f14f8187b467d",
+
+            fetchWeather: function(city){
+              fetch("https://api.openweathermap.org/data/2.5/weather?q="
+              + city
+              +"&units=imperial&appid="
+              +this.apiKey)
+              .then((response) => response.json())
+              .then((data) => this.displayWeather(data));
+            },
+            displayWeather: function(data){
+              const { name } = data;
+              const { icon, description } = data.weather[0];
+              const { temp, humidity } = data. main;
+              const { speed } = data.wind;
+              document.querySelector(".city").innerText = name;
+              document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+              document.querySelector(".description").innerText = description;
+              document.querySelector(".temperature").innerText = temp + "°F";
+              document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
+              document.querySelector(".wind").innerText = "Wind Speed: " + speed + "km/h";
+            },
+          };

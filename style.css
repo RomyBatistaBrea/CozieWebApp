@@ -4,7 +4,7 @@
 }
 
 body {
-  background: url('images/backgrounds/night-time.jpg');
+  background-image: url('https://source.unsplash.com/4000x2400/?nature,city');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position:bottom 25%;
@@ -30,40 +30,118 @@ body {
   color: white;
   position: fixed;
   right: 0;
-  border: 2px solid rgba(133, 53, 207, 0.443);
+  border: 2px solid rgba(39, 38, 41, 0.443);
   margin-right: 82px;
   padding: 15px;
   border-radius: 15px;
   backdrop-filter: blur(4px);
 }
 
+.water-layout-div {
+  width:25vw;
+  height:60vh;
+  min-height: fit-content;
+  border-radius: 25px;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  border: 2px solid rgba(39, 38, 41, 0.313);
+  background-color: rgba(39, 38, 41, 0.313);
+  backdrop-filter: blur(2px);
+  margin-left: 50px;
+  margin-top: 45px;
+  text-align: center;
+}
+
+.water-header {
+  color: rgba(90, 180, 235, 0.676);
+  font-size: 2vw;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
+.count-wrapper {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
+.cup-count {
+  background-size:1vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  margin-top: 4%;
+  margin-top: 4%;
+  border: none;
+  transition: background-color 0.3s;
+  outline: none;
+  background-color:white;
+  font-size: 1vw;
+}
+
+.bar {
+  border: 8px solid rgba(47, 47, 47, 0.176);
+  max-width: 90%;
+  border-radius: 10px;
+  margin-top: 10%;
+  display: inline-block;
+  justify-content: center;
+}
+
+.hydration-studies {
+  color: white;
+  font-size:.9vw;
+  margin-top: 10%;
+  width: 65%;
+  border-radius: 8px;
+  background-color: rgba(123, 119, 131, 0.281);
+  display: inline-block;
+  padding: 10px;
+}
+
+span {
+  margin-top: 5%;
+  margin-bottom: 8%;
+  display: inline-block;
+  font-size: 1.5vw;
+  color: white;
+  animation: waveAnimation 2s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes waveAnimation {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 .temperature-layout-div {
   width:25vw;
   height:60vh;
+  min-height: fit-content;
   border-radius: 25px;
   overflow: hidden;
   position: fixed;
   bottom: 0;
   right: 0;
-  border: 2px solid rgba(133, 53, 207, 0.443);
-  background-color: rgba(109, 16, 196, 0.24);
+  border: 2px solid rgba(39, 38, 41, 0.313);
+  background-color: rgba(39, 38, 41, 0.313);
   margin-right: 50px;
   margin-bottom: 45px;
-  
   text-align: center;
-}
-
-.collect-happy-sticker {
-    background-color: transparent;
-    font-family: 'Space Mono', monospace;
-    font-size: 15px;
-    color: white;
-    backdrop-filter: blur(6px);
-    cursor: pointer;
-
-  }
-.collect-happy-sticker:hover {
-    background-color: red;
 }
 
 p {
@@ -92,6 +170,12 @@ p {
   padding-left: 5px;
 }
 
+.search-wrapper {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
 .search-box {
   background-size:1vw;
   padding-left: 20px;
@@ -102,13 +186,32 @@ p {
   border: none;
   transition: background-color 0.3s;
   outline: none;
-  background-color:rgba(255, 255, 255, 0.26)
+  background-color:rgba(255, 255, 255, 0.26);
+  display: inline-block;
+  font-size: 1vw;
+  margin-right: 5%;
 }
 
 .search-box:hover{
   background-color:white
 }
 
+
+.search-button {
+  display: inline-block;
+  height: 3vw;
+  width: 3vw;
+  font-size: 1vw;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color:rgba(255, 255, 255, 0.26);
+  transition: background-color 0.3s;
+}
+
+.search-button:hover{
+  background-color:white
+}
 
 img {
   width: 45%;
@@ -122,92 +225,13 @@ img {
   max-height: 100%; max-width: 100%; object-fit: contain;
 }
 
-.water-layout-div {
-  width:25vw;
-  height:60vh;
-  border-radius: 25px;
-  overflow: hidden;
-  position: fixed;
-  left: 0;
-  border: 2px solid rgba(133, 53, 207, 0.443);
-  background-color: rgba(109, 16, 196, 0.24);
-  margin-left: 50px;
-  margin-top: 45px;
-  text-align: center;
-
-}
-
-.water-header {
-  color: rgba(90, 180, 235, 0.676);
-  font-size: 2vw;
-}
-
-.count-wrapper {
-  display: inline-block;
-  width: 100%;
-  margin-top: 10%;
-}
-.cup-count {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-radius: 10px;
-  border: none;
-  transition: background-color 0.3s;
-  outline: none;
-  background-color: white;
-
-}
-
-.bar {
-  border: 8px solid rgba(47, 47, 47, 0.176);
-  max-width: 90%;
-  border-radius: 10px;
-  margin-top: 10%;
-  display: inline-block;
-  justify-content: center;
-}
-
-.hydration-studies {
-  color: white;
-  font-size:.9vw;
-  margin-top: 10%;
-  width: 65%;
-  border-radius: 8px;
-  background-color: rgba(62, 10, 112, 0.263);
-  display: inline-block;
-  padding: 10px;
-}
-
-span {
-  margin-top: 5%;
-  margin-bottom: 8%;
-  display: inline-block;
-  font-size: 1.5vw;
-  color: white;
-  animation: waveAnimation 2s infinite;
-  animation-delay: calc(.1s * var(--i));
-}
-
-@keyframes waveAnimation {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(0, 10px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
 #clock{
   font-size: 2.5vw;
   color: white;
   position: fixed;
   right: 0;
-  border: 2px solid rgba(133, 53, 207, 0.443);
+  border: 2px solid rgba(39, 38, 41, 0.313);
+  background-color: rgba(39, 38, 41, 0.313);
   margin-right: 82px;
   padding: 15px;
   border-radius: 15px;
