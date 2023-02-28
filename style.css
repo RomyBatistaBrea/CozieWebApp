@@ -46,9 +46,9 @@ body {
   overflow: hidden;
   position: fixed;
   left: 0;
-  border: 2px solid rgba(39, 38, 41, 0.313);
-  background-color: rgba(39, 38, 41, 0.313);
-  backdrop-filter: blur(3px);
+  border: 2px solid rgba(39, 38, 41, 0.45);
+  background-color: rgba(39, 38, 41, 0.45);
+  backdrop-filter: blur(5px);
   margin-left: 50px;
   margin-top: 45px;
   text-align: center;
@@ -176,9 +176,9 @@ span {
   position: fixed;
   bottom: 0;
   right: 0;
-  border: 2px solid rgba(39, 38, 41, 0.313);
-  background-color: rgba(39, 38, 41, 0.313);
-  backdrop-filter: blur(3px);
+  border: 2px solid rgba(39, 38, 41, 0.45);
+  background-color: rgba(39, 38, 41, 0.45);
+  backdrop-filter: blur(5px);
   margin-right: 50px;
   margin-bottom: 45px;
   text-align: center;
@@ -311,8 +311,8 @@ img {
   color: white;
   position: fixed;
   right: 0;
-  border: 2px solid rgba(39, 38, 41, 0.313);
-  background-color: rgba(39, 38, 41, 0.313);
+  border: 2px solid rgba(39, 38, 41, 0.45);
+  background-color: rgba(39, 38, 41, 0.45);
   margin-right: 82px;
   padding: 15px;
   border-radius: 15px;
