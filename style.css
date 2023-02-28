@@ -4,7 +4,8 @@
 }
 
 body {
-  background-image: url('https://source.unsplash.com/4000x2400/?nature,city');
+  min-width: 400px;
+  background-image: url('https://source.unsplash.com/4000x2400/?city');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position:bottom 25%;
@@ -38,7 +39,7 @@ body {
 }
 
 .water-layout-div {
-  width:25vw;
+  width:35vw;
   height:60vh;
   min-height: fit-content;
   border-radius: 25px;
@@ -47,10 +48,56 @@ body {
   left: 0;
   border: 2px solid rgba(39, 38, 41, 0.313);
   background-color: rgba(39, 38, 41, 0.313);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(3px);
   margin-left: 50px;
   margin-top: 45px;
   text-align: center;
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  height: 3vw;
+  width: 3vw;
+  font-size: 1vw;
+  border: none;
+  border-radius: 50%;
+  margin-top: 5%;
+  margin-left: 45%;
+  cursor: pointer;
+  background-color:rgba(255, 255, 255, 0.26);
+  transition: background-color 0.3s, height 0.3s, width 0.3s;
+
+}
+
+.add-button:hover{
+  background-color:white;
+  height: 3.5vw;
+  width: 3.5vw;
+}
+
+.container .progress-bar {
+  position:absolute;
+  background-color: rgb(125, 44, 255);
+  height: 100%;
+  border-radius: 7px;
+  font-size: 1vw;
+  color: white;
+}
+
+#play-animation {
+  animation: progress-animation 2.5s forwards;
+}
+
+@keyframes progress-animation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 .water-header {
@@ -62,6 +109,7 @@ body {
   display: flex;
   align-items: center; 
   justify-content: center;
+  margin-top: 10%;
 }
 
 .count-wrapper {
@@ -84,15 +132,6 @@ body {
   outline: none;
   background-color:white;
   font-size: 1vw;
-}
-
-.bar {
-  border: 8px solid rgba(47, 47, 47, 0.176);
-  max-width: 90%;
-  border-radius: 10px;
-  margin-top: 10%;
-  display: inline-block;
-  justify-content: center;
 }
 
 .hydration-studies {
@@ -129,7 +168,7 @@ span {
 }
 
 .temperature-layout-div {
-  width:25vw;
+  width:35vw;
   height:60vh;
   min-height: fit-content;
   border-radius: 25px;
@@ -139,9 +178,16 @@ span {
   right: 0;
   border: 2px solid rgba(39, 38, 41, 0.313);
   background-color: rgba(39, 38, 41, 0.313);
+  backdrop-filter: blur(3px);
   margin-right: 50px;
   margin-bottom: 45px;
   text-align: center;
+}
+
+.stats-wrapper {
+  display: flex;
+  align-items: center; 
+  justify-content: space-evenly;
 }
 
 p {
@@ -155,25 +201,51 @@ p {
   font-size: 1vw;
 }
 
-.city-name {
-  display: inline-block;
-  font-size: 2vw;
-  color: white;
-  padding-right: 5px;
-  width: 50%;
-}
-
-.temperature {
-  display: inline-block;
-  font-size: 3vw;
-  color: white;
-  padding-left: 5px;
-}
-
 .search-wrapper {
   display: flex;
   align-items: center; 
   justify-content: center;
+}
+
+.location-wrapper {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
+.city {
+  display: inline-block;
+  font-size: 2.5vw;
+  color: white;
+  margin-right: 5%;
+}
+
+.temperature {
+  display: inline-block;
+  font-size: 3.5vw;
+  color: white;
+  margin-left: 5%;
+}
+
+.wind {
+  font-size: 1vw;
+  color: white;
+  text-transform: capitalize;
+}
+
+.description {
+  display: inline-block;
+  font-size: 1vw;
+  color: white;
+  text-transform: capitalize;
+  margin-left: 5%;
+}
+
+.humidity {
+  display: inline-block;
+  font-size: 1vw;
+  color: white;
+  text-transform: capitalize;
 }
 
 .search-box {
@@ -190,10 +262,11 @@ p {
   display: inline-block;
   font-size: 1vw;
   margin-right: 5%;
+  width: calc(100%-100px);
 }
 
 .search-box:hover{
-  background-color:white
+  background-color:white;
 }
 
 
@@ -206,11 +279,13 @@ p {
   border-radius: 50%;
   cursor: pointer;
   background-color:rgba(255, 255, 255, 0.26);
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, height 0.3s, width 0.3s;
 }
 
 .search-button:hover{
-  background-color:white
+  background-color:white;
+  height: 3.5vw;
+  width: 3.5vw;
 }
 
 img {
@@ -225,6 +300,12 @@ img {
   max-height: 100%; max-width: 100%; object-fit: contain;
 }
 
+.icon {
+  background-repeat: no-repeat;
+  height: 4vw; width: 4vw; object-fit: contain;
+  margin-bottom: 5%;
+}
+
 #clock{
   font-size: 2.5vw;
   color: white;
@@ -236,4 +317,54 @@ img {
   padding: 15px;
   border-radius: 15px;
   backdrop-filter: blur(4px);
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+}
+
+.words-left, .number-center, .words-right {
+  display: inline-block;
+  font-size: 1.5vw;
+  color: white;
+  margin-top: 2.5vh;
+  font-size: 13px;
+  animation: waveAnimation 5s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+
+.container {
+  background-color: lightgrey;
+  border-radius: 7px;
+  height: 25px;
+  width: 90%;
+  margin-left: 4.5%;
+  position: relative;
+}
+
+.get-ready {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  height: 3vw;
+  width: 7vw;
+  font-size: 1vw;
+  border: none;
+  border-radius: 7px;
+  margin-top: 3%;
+  margin-left: 39.5%;
+  cursor: pointer;
+  background-color:rgba(255, 255, 255, 0.26);
+  color: white;
+  font-size: .8vw;
+  transition: background-color 0.3s, height 0.3s, width 0.3s; 
+}
+
+.get-ready:hover{
+  background-color:white;
+  color: black;
+  height: 3.5vw;
+  width: 7.5vw;
 }
