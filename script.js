@@ -1,5 +1,8 @@
 function realtimeClock() {
   var rtClock = new Date();
+  var month = rtClock.getUTCMonth() + 1; //months from 1-12
+  var day = rtClock.getUTCDate();
+  var year = rtClock.getUTCFullYear();
   var hours = rtClock.getHours();
   var minutes = rtClock.getMinutes();
   var seconds = rtClock.getSeconds();
@@ -8,9 +11,12 @@ function realtimeClock() {
   hours = ("0" + hours).slice(-2);
   minutes = ("0" + minutes).slice(-2);
   seconds = ("0" + seconds).slice(-2);
+  document.getElementById('date').innerHTML = 
+  month + "/" + day + "/" + year
   document.getElementById('clock').innerHTML =
   hours + ":" + minutes + ":" + seconds + " " + amPm;
   var t = setTimeout(realtimeClock, 500);
+  
 } // End realtimeClock()
         
 
@@ -72,7 +78,7 @@ if (event.key === "Enter") {
             document.querySelector(".city").innerText = name;
             document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
             document.querySelector(".description").innerText = description;
-            document.querySelector(".temperature").innerText = Math.trunc(temp) + "°F";
+            document.querySelector(".temperature").innerText = Math.trunc(temp) + "\u00B0";
             document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
             document.querySelector(".wind").innerText = "Wind Speed: " + parseInt(speed) + "km/h";
             document.querySelector(".weather").classList.remove("loading");

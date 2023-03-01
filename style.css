@@ -23,19 +23,6 @@ body {
   width: 26%;
   color: white;
   display: inline-block;
-
-}
-
-.time-clock {
-  font-size: 3vw;
-  color: white;
-  position: fixed;
-  right: 0;
-  border: 2px solid rgba(39, 38, 41, 0.443);
-  margin-right: 82px;
-  padding: 15px;
-  border-radius: 15px;
-  backdrop-filter: blur(4px);
 }
 
 .water-layout-div {
@@ -47,11 +34,18 @@ body {
   position: fixed;
   left: 0;
   border: 2px solid rgba(39, 38, 41, 0.45);
-  background-color: rgba(39, 38, 41, 0.45);
-  backdrop-filter: blur(5px);
+  background-color: rgba(39, 38, 41, 0.1);
   margin-left: 50px;
   margin-top: 45px;
   text-align: center;
+  transition: width, height, backdrop-filter;
+  transition-duration: .5s;
+}
+
+.water-layout-div:hover {
+  width: calc(35vw + 1.5%);
+  height: calc(60vh + 2.5%);
+  backdrop-filter: blur(5px);
 }
 
 .add-button {
@@ -68,8 +62,8 @@ body {
   margin-left: 45%;
   cursor: pointer;
   background-color:rgba(255, 255, 255, 0.26);
-  transition: background-color 0.3s, height 0.3s, width 0.3s;
-
+  transition: background-color, height, width, margin-left;
+  transition-duration: 0.3s;
 }
 
 .add-button:hover{
@@ -177,11 +171,18 @@ span {
   bottom: 0;
   right: 0;
   border: 2px solid rgba(39, 38, 41, 0.45);
-  background-color: rgba(39, 38, 41, 0.45);
-  backdrop-filter: blur(5px);
+  background-color: rgba(39, 38, 41, 0.1);
   margin-right: 50px;
   margin-bottom: 45px;
   text-align: center;
+  transition: width, height, backdrop-filter;
+  transition-duration: .5s;
+}
+
+.temperature-layout-div:hover {
+  width: calc(35vw + 1.5%);
+  height: calc(60vh + 2.5%);
+  backdrop-filter: blur(5px);
 }
 
 .stats-wrapper {
@@ -260,6 +261,7 @@ p {
   outline: none;
   background-color:rgba(255, 255, 255, 0.26);
   display: inline-block;
+  color:black;
   font-size: 1vw;
   margin-right: 5%;
   width: calc(100%-100px);
@@ -308,17 +310,30 @@ img {
   margin-bottom: 5%;
 }
 
-#clock{
-  font-size: 2.5vw;
-  color: white;
-  position: fixed;
-  right: 0;
+.date-clock-container{
+  float: right;
+  width: 13vw;
+  height: 5vw;
   border: 2px solid rgba(39, 38, 41, 0.45);
-  background-color: rgba(39, 38, 41, 0.45);
-  margin-right: 82px;
-  padding: 15px;
+  margin-right: 85px;
+  padding-top: 20px;
+  padding-bottom: 16px;
+  padding-left: 20px;
   border-radius: 15px;
-  backdrop-filter: blur(4px);
+  transition: width, height, backdrop-filter;
+  transition-duration: .5s;
+}
+
+.date-clock-container:hover {
+  
+  width: 14vw;
+  height: 6vw;
+  backdrop-filter: blur(10px);
+}
+
+.date, .clock{
+  font-size: 1.5vw;
+  color: white;
 }
 
 .weather.loading {
