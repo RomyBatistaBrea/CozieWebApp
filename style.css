@@ -292,7 +292,9 @@ img {
   width: 45%;
   height: 45%;
   margin-top: 25px;
+  margin-right: 10px;
   background-size: cover;
+  border: 0px;
 }
 
 .sun {
