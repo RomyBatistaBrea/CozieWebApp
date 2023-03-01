@@ -72,7 +72,7 @@ if (event.key === "Enter") {
             document.querySelector(".city").innerText = name;
             document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
             document.querySelector(".description").innerText = description;
-            document.querySelector(".temperature").innerText = parseInt(temp) + "°F";
+            document.querySelector(".temperature").innerText = Math.trunc(temp) + "°F";
             document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
             document.querySelector(".wind").innerText = "Wind Speed: " + parseInt(speed) + "km/h";
             document.querySelector(".weather").classList.remove("loading");
