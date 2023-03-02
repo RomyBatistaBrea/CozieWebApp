@@ -314,8 +314,13 @@ img {
   float: right;
   width: 13vw;
   height: 5vw;
+  min-height: fit-content;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
   border: 2px solid rgba(39, 38, 41, 0.45);
-  margin-right: 85px;
+  background-color: rgba(39, 38, 41, 0.1);
+  margin-right: 5%;
   padding-top: 20px;
   padding-bottom: 16px;
   padding-left: 20px;
@@ -325,13 +330,13 @@ img {
 }
 
 .date-clock-container:hover {
-  
   width: 14vw;
   height: 6vw;
   backdrop-filter: blur(10px);
 }
 
 .date, .clock{
+  margin-left: 8%;
   font-size: 1.5vw;
   color: white;
 }
