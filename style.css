@@ -132,11 +132,22 @@ body {
   color: white;
   font-size:.9vw;
   margin-top: 10%;
+  padding-top: 2%;
   width: 65%;
+  height: 11%;
   border-radius: 8px;
   background-color: rgba(123, 119, 131, 0.281);
   display: inline-block;
   padding: 10px;
+  transition: background-color, width, height, padding-top;
+  transition-duration: .5s;
+}
+
+.hydration-studies:hover {
+  background-color: rgba(194, 191, 199, 0.281);
+  width: 67%;
+  height: 13%;
+  padding-top: 3.5%;
 }
 
 span {
@@ -321,15 +332,18 @@ img {
   border: 2px solid rgba(39, 38, 41, 0.45);
   background-color: rgba(39, 38, 41, 0.1);
   margin-right: 5%;
-  padding-top: 20px;
-  padding-bottom: 16px;
-  padding-left: 20px;
+  padding-top: 1rem;
+  padding-bottom: .8rem;
+  padding-left: 1rem;
   border-radius: 15px;
-  transition: width, height, backdrop-filter;
+  transition: width, height, backdrop-filter, padding-top, padding-bottom, padding-left;
   transition-duration: .5s;
 }
 
 .date-clock-container:hover {
+  padding-top: 1.3rem;
+  padding-bottom: .9rem;
+  padding-left: 1.3rem;
   width: 14vw;
   height: 6vw;
   backdrop-filter: blur(10px);
