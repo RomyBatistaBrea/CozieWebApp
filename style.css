@@ -74,7 +74,7 @@ body {
 
 .container .progress-bar {
   position:absolute;
-  background-color: rgb(125, 44, 255);
+  background: linear-gradient(#e66465, #9198e5);
   height: 100%;
   border-radius: 7px;
   font-size: 1vw;
