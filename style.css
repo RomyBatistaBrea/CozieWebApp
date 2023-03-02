@@ -45,7 +45,7 @@ body {
 .water-layout-div:hover {
   width: calc(35vw + 1.5%);
   height: calc(60vh + 2.5%);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(8px);
 }
 
 .add-button {
@@ -193,7 +193,7 @@ span {
 .temperature-layout-div:hover {
   width: calc(35vw + 1.5%);
   height: calc(51vh + 3%);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(8px);
 }
 
 .stats-wrapper {
