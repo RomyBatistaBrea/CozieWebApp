@@ -5,7 +5,7 @@
 
 body {
   min-width: 400px;
-  background-image: url('https://source.unsplash.com/4000x2400/?city');
+  background-image: url('https://source.unsplash.com/4000x2400/?lights/city');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position:bottom 25%;
@@ -324,7 +324,7 @@ img {
 .date-clock-container{
   float: right;
   width: 13vw;
-  height: 5vw;
+  height: 6.5vw;
   min-height: fit-content;
   overflow: hidden;
   position: fixed;
@@ -332,6 +332,7 @@ img {
   border: 2px solid rgba(39, 38, 41, 0.45);
   background-color: rgba(39, 38, 41, 0.1);
   margin-right: 5%;
+  margin-bottom: 20%;
   padding-top: 1rem;
   padding-bottom: .8rem;
   padding-left: 1rem;
@@ -342,16 +343,21 @@ img {
 
 .date-clock-container:hover {
   padding-top: 1.3rem;
-  padding-bottom: .9rem;
-  padding-left: 1.3rem;
+  padding-bottom: 1.3rem;
+  padding-left: 1.4rem;
   width: 14vw;
-  height: 6vw;
+  height: 7vw;
   backdrop-filter: blur(10px);
 }
 
 .date, .clock{
   margin-left: 8%;
   font-size: 1.5vw;
+  color: white;
+}
+
+.badge-base__linkLI-simple-link{
+  margin-left: 8%;
   color: white;
 }
 
